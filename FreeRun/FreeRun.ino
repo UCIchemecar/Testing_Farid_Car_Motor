@@ -67,6 +67,8 @@ void loop()
     
     
   }
+  total2=total2+abs(j/3591.84);
+  total1=total1+abs(i/3591.84);
   Serial.print(runTime);
   Serial.print("      ");
   Serial.print(total1); Serial.print("    ");
