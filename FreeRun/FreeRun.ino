@@ -38,8 +38,8 @@ void loop()
   static int flag6=0;
   static int speed1;
   static int speed2;
-  static long int runTime=0;
-  static long int startTime=0;
+  static float runTime=0;
+  static float startTime=0;
   static int co;
   static signed int adjust=1;//adjustment to the speed everytime the loop is run
   static int counter=0;//count the total times the loop has been run
@@ -65,11 +65,10 @@ void loop()
   {
     runTime=millis()-startTime;
     
-    
   }
   total2=total2+abs(j/3591.84);
   total1=total1+abs(i/3591.84);
-  Serial.print(runTime);
+  Serial.print(runTime/1000.0);
   Serial.print("      ");
   Serial.print(total1); Serial.print("    ");
   Serial.println(total2);
