@@ -29,6 +29,7 @@ void loop()
    md.setM2Speed(400);
    static float total2=0;
   static float total1=0;
+  static float oldTotal1;
   static int flag1=0;
   static int flag2=0;
   static int flag3=0;
@@ -54,19 +55,20 @@ void loop()
     static int t1=millis(); //t1 is the time it starts
   int j=PololuWheelEncoders::getCountsAndResetM2();
   int i=PololuWheelEncoders::getCountsAndResetM1();
-  total2=total2+abs(j/3591.84);
-  total1=total1+abs(i/3591.84);
   if(total1>0.01 && flag6==0)
   {
     startTime=millis();
     flag6=1;
   }
-  if(flag6==1)
+  
+  if(flag6==1 && i!=0)
   {
     runTime=millis()-startTime;
-    Serial.print(runTime);
-    Serial.print("      ");
+    
+    
   }
+  Serial.print(runTime);
+  Serial.print("      ");
   Serial.print(total1); Serial.print("    ");
   Serial.println(total2);
 }
