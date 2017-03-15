@@ -64,12 +64,12 @@ void loop()
   if(flag6==1 && i!=0)
   {
     runTime=millis()-startTime;
-    runTime=runTime/1000.0;    
+    //runTime=runTime/1000.0;    
   }
   total2=total2+abs(j/3591.84);
   total1=total1+abs(i/3591.84);
 
-  Serial.print(runTime,4);
+  Serial.print(runTime/1000.0,4);
   Serial.print("      ");
   Serial.print(total1); Serial.print("    ");
   Serial.println(total2);
