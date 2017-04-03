@@ -1,5 +1,4 @@
 #include "DualMC33926MotorShield.h"
-#include "DualMC33926MotorShield.h"
 #include <PololuWheelEncoders.h>
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
