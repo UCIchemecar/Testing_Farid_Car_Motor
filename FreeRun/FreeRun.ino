@@ -25,8 +25,9 @@ void setup()
 
 void loop()
 {
-   md.setM1Speed(380);
-   md.setM2Speed(400);
+  //adjust one of these two to balance out the car, the min value is 0, the max value is 400
+   md.setM1Speed(380);//If M1 is too slow, increase this number, if too fast, decrease this number  
+   md.setM2Speed(400);//If M2 is too slow, increase this number, if too fast, decrease this number
    static float total2=0;
   static float total1=0;
   static float oldTotal1;
